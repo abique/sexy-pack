@@ -59,7 +59,7 @@ sp_serializer_bool(struct sp_serializer *s, bool value);
 
 /* Pushes an 8 bits integer. Returns false on EOB. */
 bool
-sp_serializer_int8(struct sp_serializer *s, int16_t value);
+sp_serializer_int8(struct sp_serializer *s, int8_t value);
 
 /* Pushes an 16 bits integer. Returns false on EOB. */
 bool

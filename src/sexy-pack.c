@@ -138,7 +138,7 @@ sp_serializer_float(struct sp_serializer *s, float value)
 }
 
 bool
-sp_serializer_float(struct sp_serializer *s, double value)
+sp_serializer_double(struct sp_serializer *s, double value)
 {
   if (!s->out || s->out + 9 >= s->out_end)
     return false;
