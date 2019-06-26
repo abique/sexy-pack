@@ -227,14 +227,15 @@ sp_deserialize(struct sp_deserializer *d)
       d->type = SP_SERIALIZE_EOB;
       return false;
     }
-    d->i64 = ((int64_t)d->in[1] << 56) |
-            ((int64_t)d->in[2] << 48) |
-            ((int64_t)d->in[3] << 40) |
-            ((int64_t)d->in[4] << 32) |
-            (d->in[1] << 24) |
-            (d->in[2] << 16) |
-            (d->in[3] << 8) |
-            d->in[4];
+    d->i64 =
+          ((int64_t)d->in[1] << 56) |
+          ((int64_t)d->in[2] << 48) |
+          ((int64_t)d->in[3] << 40) |
+          ((int64_t)d->in[4] << 32) |
+          ((int64_t)d->in[5] << 24) |
+          ((int64_t)d->in[6] << 16) |
+          ((int64_t)d->in[7] <<  8) |
+          ((int64_t)d->in[8]);
     d->in += 9;
     return true;
 
